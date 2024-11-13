@@ -1,10 +1,10 @@
 package priv.zzy;
 
-import priv.zzy.solutions.T00447;
+import priv.zzy.solutions.T01547;
 
 public class Main {
     public static void main(String[] args) {
-        Solution s = new T00447();
+        Solution s = new T01547();
         s.run();
     }
 }
