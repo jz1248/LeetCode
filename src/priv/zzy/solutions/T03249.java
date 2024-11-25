@@ -23,7 +23,7 @@ public class T03249 extends Solution {
         }
 
         boolean[] m = new boolean[n];
-        dfs(f, n, m, 0, -1);
+        dfs(f, m, 0, -1);
         int count = 0;
         for (int j = 0; j < n; j++) {
             if (m[j]) {
@@ -33,7 +33,7 @@ public class T03249 extends Solution {
         return count;
     }
 
-    public int dfs(List<List<Integer>> f, int n, boolean[] m, int curNode, int parentNode) {
+    public int dfs(List<List<Integer>> f, boolean[] m, int curNode, int parentNode) {
         int lastChildNum = -1;
         boolean result = true;
         int thisNum = 1;
@@ -42,7 +42,7 @@ public class T03249 extends Solution {
             if (node == parentNode) {
                 continue;
             }
-            int childNum = dfs(f, n, m, node, curNode);
+            int childNum = dfs(f, m, node, curNode);
             thisNum += childNum;
             if (!result) {
                 continue;
